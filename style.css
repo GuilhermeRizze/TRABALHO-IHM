@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+hr {
+    background-color: #464646;
+    height: 0.2px;
+    border: none;
+}
+
+#navbar {
+    background-color: #fff;
+    height: 100px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.menu-bars {
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: #464646;
+}
+
+#nav-menu {
+    background-color: #fff;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+}
+
+#nav-menu.active {
+    left: 0;
+    transition: 350ms;
+}
+
+.nav-text {
+    display: flex;
+    justify-content: start;
+    list-style: none;
+    height: 50px;
+    padding: 1rem;
+}
+
+.nav-text a {
+    text-decoration: none;
+    color: #464646;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
+.nav-text:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.nav-menu-items {
+    width: 100%;
+}
+
+.nav-icon {
+    padding-right: 1rem;
+    color: #838080;
+}
+
+#youtube-logo {
+    color: #f90201;
+    padding-right: 0.2rem;
+}
+
+#navbar-toggle {
+    background-color: #fff;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#navbar-toogle h1 {
+    color: #464646;
+    font-family: Oswald, sans-serif;
+}
+
+#navbar-toggle a {
+    text-decoration: none;
+}
+
+.fa-bars {
+    color: #464646;
+}
+
+.nav-section {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+.menu-section{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+    gap: 48px 15px;
+    padding: 48px 0;
+    margin: 0 24px;
+}
+.topo{
+    width: 20px;
+    height: -10px;
+    position: relative;
+
+}
+
+.topo span{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #979797;
+}
+
+.topo span:nth-child(1){
+    top: 0;
+}
+
+.topo span:nth-child(3){
+    top: 100%;
+}
+
+.logo{
+    height: 30px;
+    margin: -10px 30px 0;
+    left: 70px;
+    position: absolute;
+    top: 45px;
+}
+.caixa-pesquisa{
+    position: absolute;
+    max-width: 500px;
+    width: 500px;
+    height: 35px;
+    left: 400px;
+    display: flex;
+}
+
+.pesquisar{
+    width: 500px;
+    height: 100%;
+    border: 2px solid #dbdbdb;
+    padding: 0 10px;
+    display: flex;
+    
+}
+
+
+::placeholder {
+    font-size: 1.5em;
+  }
+
+.button-pesquisar{
+    width: 20%;
+    height: 100%;
+    background: #f0f0f0;
+    border: 2px solid #dbdbdb;
+    padding: 5px 10px;
+    border-left: none;
+
+}
+
+.button-pesquisar img{
+    height: 100%;
+}
+
+.icones-barra{
+    height: 35px;
+    display: flex;
+    margin-left: 1050px;
+    align-items: right;
+}
+
+.icones-barra .icon{
+    height: 80%;
+    margin-left: 20px;
+    cursor: pointer;/*Muda o cursor para click*/
+    display: flex;
+}
+
+.perfil{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    overflow: hidden;/*Não exibe a barra de rolagem*/
+}
+
+.perfil img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*Dimensiona o conteudo e proporção*/
+}
+
+
+/*CATEGORIAS TOPO*/
+.categorias{
+    padding: 15px 120px;
+    border-top: 1px solid rgb(197, 197, 197);
+    border-bottom: 1px solid rgb(197, 197, 197);
+    left: 700px;
+}
+
+.grupo-categoria{
+    display: flex;
+    overflow: hidden;
+}
+
+.categoria{
+    margin-right: 20px;
+    word-wrap: none;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    border-radius: 900px;
+    background-color: #e7e7e7;
+    padding: .80px 20px;
+    font-size: inherit;
+    cursor: pointer;
+    transition: background-color: 150ms;
+}
+
+.categoria:hover{
+    background-color: #ddd;
+}
+
+.categoria-selecionada{
+    margin-right: 20px;
+
+    word-wrap: none;
+    white-space: nowrap;
+    background-color: #606060;
+    color: white;
+    border-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 900px;
+    padding: .80px 20px;
+    font-size: inherit;
+    cursor: pointer;
+    transition: background-color: 150ms;
+}
+
+.categoria:last-child{
+    margin-right: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+
+@media (max-width:600px;){
+    .navbar, .menu-section, .icones-barra{
+        width: 100%;
+    }  
+}
+
+/*VIDEO*/
+
+.video{
+    width: calc(100% - 250px);
+    margin-top: 120px;
+    margin-left: 250px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 20px 5px;
+    overflow-x: hidden;
+}
+
+
+.video-section{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+    gap: 48px 15px;
+    padding: 48px 0;
+    margin: 0 24px;
+}
+
+.navbar-section{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(50px, 1fr));
+    gap: 48px 15px;
+    padding: 48px 0;
+    margin: 0 24px;
+}
+
+.video-section:first-child{
+    border-top: none;
+}
+
+.video-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.capa{
+    display: flex;
+}
+
+.capa::before{
+    content: attr(data-duration);
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    right: 5px;
+    bottom: 5px;
+    padding: .15px .48px;
+    border-radius: .48px;
+    font-size: .140px;
+}
+
+.imagem-capa{
+    width: 100%;
+    height: 100%;
+    min-width: 250px;
+    min-height: 150px;
+    background-color: #aaa;
+}
+
+.info-video{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+.canal{
+    margin-right: .1200px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background-color: #aaa;
+}
+
+.detalhe{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    text-decoration: none;
+    color: rgb(24, 26, 23);
+}
+
+.nome_canal{
+    margin-bottom: .15px;
+    text-decoration: none;
+    transition: color 150ms;
+}
+
+.nome_canal:hover{
+    color: #111;
+}
+
+.nome_canal, .infos{
+    color: #555;
+}
+
+.videos{
+    background-color: #f9f9f9;
+    width: 100%;
+    height: 100px;
+}
+
+@media screen and  (max-width:600px;){
+    .navbar, .menu-section, .icones-barra, .menu-bars, .caixa-pesquisa, .pesquisar, .icones-barra{
+        width: 100%;
+        padding: 0px;
+    }  
+}
